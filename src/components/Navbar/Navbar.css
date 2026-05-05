@@ -1,0 +1,45 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background: rgb(240, 230, 212);
+    color: rgb(6, 104, 6);
+}
+
+.logo {
+    margin: 0;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    gap: 10px;
+}
+
+.nav-links button {
+    background: rgb(6, 104, 6);
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.nav-links button:hover {
+    background: rgb(8, 130, 8);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.logout {
+    background: #ef4444;
+    color: white;
+}
+
+.logout:hover {
+    background: #dc2626;
+}
