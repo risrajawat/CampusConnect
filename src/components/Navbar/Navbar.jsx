@@ -1,16 +1,36 @@
-import { useNavigate } from "react-router-dom";
 import "./Navbar.css";
 
 function Navbar() {
-    const navigate = useNavigate();
+  return (
+    <div className="navbar">
 
-    return (
-        <div className="navbar" style={{ justifyContent: "flex-end" }}>
-            <div className="navLinks">
-                <button onClick={() => navigate("/profile")}>My Account</button>
-            </div>
+      {/* Left Side */}
+      <div className="navbar-text">
+        <h2>CampusConnect</h2>
+      </div>
+
+      {/* Right Side */}
+      <div className="navbar-user">
+
+        <div className="notification">
+          🔔
         </div>
-    );
+
+        <div className="profile">
+          <div className="profile-image">
+            R
+          </div>
+
+          <div>
+            <h4>Rishabh</h4>
+            <p>Student</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  );
 }
 
 export default Navbar;

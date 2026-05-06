@@ -1,45 +1,69 @@
+/* Navbar */
+
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 30px;
-    background: rgb(240, 230, 212);
-    color: rgb(6, 104, 6);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
 }
 
-.logo {
-    margin: 0;
-    font-size: 20px;
-    font-weight: bold;
+/* Title */
+
+.navbar-text h2 {
+  font-size: 24px;
+  color: #6c5ce7;
 }
 
-.nav-links {
-    display: flex;
-    gap: 10px;
+/* Right Side */
+
+.navbar-user {
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }
 
-.nav-links button {
-    background: rgb(6, 104, 6);
-    color: white;
-    border: none;
-    padding: 8px 14px;
-    border-radius: 6px;
-    cursor: pointer;
-    font-weight: bold;
-    transition: all 0.3s ease;
+/* Notification */
+
+.notification {
+  font-size: 22px;
+  cursor: pointer;
 }
 
-.nav-links button:hover {
-    background: rgb(8, 130, 8);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+/* Profile */
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: white;
+  padding: 8px 14px;
+  border-radius: 12px;
 }
 
-.logout {
-    background: #ef4444;
-    color: white;
+/* Profile Image */
+
+.profile-image {
+  width: 40px;
+  height: 40px;
+  background: #6c5ce7;
+  color: white;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-weight: bold;
 }
 
-.logout:hover {
-    background: #dc2626;
+/* User Info */
+
+.profile h4 {
+  font-size: 14px;
+  color: #222;
+}
+
+.profile p {
+  font-size: 12px;
+  color: #666;
 }

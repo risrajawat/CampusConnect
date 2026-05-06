@@ -1,18 +1,59 @@
-.top {
+/* Events Page */
+
+.events-page {
+  padding: 20px;
+}
+
+/* Header */
+
+.events-header {
+  margin-bottom: 25px;
+}
+
+.events-header h1 {
+  font-size: 30px;
+  color: #222;
+  margin-bottom: 5px;
+}
+
+.events-header p {
+  color: #666;
+  font-size: 14px;
+}
+
+/* Top Section */
+
+.top-section {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 20px;
+  gap: 20px;
+  margin-bottom: 25px;
+  flex-wrap: wrap;
 }
 
-.top input {
-  padding: 10px;
-  width: 250px;
-  border-radius: 8px;
-  border: 1px solid #ddd;
+/* Events Grid */
+
+.events-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
 }
 
-.top select {
-  padding: 10px;
-  border-radius: 8px;
+/* Responsive */
+
+@media (max-width: 992px) {
+
+  .events-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+@media (max-width: 600px) {
+
+  .events-grid {
+    grid-template-columns: 1fr;
+  }
+
 }
