@@ -1,0 +1,106 @@
+/* Card */
+
+.card {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* Image */
+
+.card-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+/* Content */
+
+.card-content {
+  padding: 16px;
+}
+
+/* Category */
+
+.card-category {
+  background: #6c5ce7;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 8px;
+  font-size: 12px;
+}
+
+/* Title */
+
+.card h3 {
+  margin: 12px 0;
+  font-size: 18px;
+  color: #222;
+}
+
+/* Text */
+
+.card p {
+  font-size: 14px;
+  color: #666;
+  margin: 6px 0;
+}
+
+/* Description */
+
+.description {
+  margin-top: 10px;
+  line-height: 1.5;
+}
+
+/* Buttons */
+
+.card-buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 16px;
+}
+
+/* View Details Button */
+
+.details-btn {
+  border: none;
+  background: #6c5ce7;
+  color: white;
+  padding: 10px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.details-btn:hover {
+  background: #5a4bd8;
+}
+
+/* Interest Button */
+
+.interest-btn {
+  border: none;
+  background: #f3f4f6;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 18px;
+  transition: 0.3s;
+}
+
+.interest-btn:hover {
+  background: #ffe4e6;
+}
+
+.interest-btn.active {
+  background: #ffe4e6;
+}

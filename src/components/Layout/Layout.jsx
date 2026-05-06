@@ -1,11 +1,16 @@
+import { Outlet } from "react-router-dom";
 import Sidebar from "../Sidebar/Sidebar";
-import "./layout.css";
+import "./Layout.css";
 
-function Layout({ children }) {
+// Layout wraps every page that needs the sidebar
+// The <Outlet /> renders whatever page is currently active
+function Layout() {
   return (
-    <div className="layout">
+    <div className="page-wrapper">
       <Sidebar />
-      <div className="main">{children}</div>
+      <main className="main-content">
+        <Outlet />
+      </main>
     </div>
   );
 }

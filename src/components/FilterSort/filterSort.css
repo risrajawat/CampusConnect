@@ -1,0 +1,53 @@
+/* Filter & Sort */
+
+.filter-sort {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 0;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* Categories */
+
+.categories {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+/* Category Button */
+
+.category-btn {
+  border: none;
+  background: #f3f4f6;
+  padding: 10px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.category-btn:hover {
+  background: #e5e7eb;
+}
+
+/* Active Button */
+
+.category-btn.active {
+  background: #6c5ce7;
+  color: white;
+}
+
+/* Sort Dropdown */
+
+.sort-select {
+  border: 1px solid #ddd;
+  padding: 10px 14px;
+  border-radius: 8px;
+  outline: none;
+  cursor: pointer;
+  font-size: 14px;
+  background: white;
+}

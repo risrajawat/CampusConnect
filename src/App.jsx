@@ -1,45 +1,35 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-
-// Layout (Sidebar + main area)
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Layout from "./components/Layout/Layout";
+import EventsPage from "./pages/Events/Events";
+import SavedEventsPage from "./pages/SavedEvents/SavedEvents";
+import LoginPage from "./pages/Login/Login";
 
-// Pages
-import Events from "./pages/Events/Events";
-import Login from "./pages/Login/Login";
-// (optional later)
-// import Opportunities from "./pages/Opportunities/Opportunities";
-// import Saved from "./pages/Saved/Saved";
-
+// App is just the router — Layout wraps the pages that need a sidebar
 function App() {
   return (
-    <Router>
+    <BrowserRouter>
       <Routes>
-        {/* Pages WITH sidebar/layout */}
-        <Route
-          path="/"
-          element={
-            <Layout>
-              <Events />
-            </Layout>
-          }
-        />
+        {/* Login page — no sidebar */}
+        <Route path="/login" element={<LoginPage />} />
 
-        {/* Add more pages same pattern */}
-        {/* 
-        <Route
-          path="/opportunities"
-          element={
-            <Layout>
-              <Opportunities />
-            </Layout>
-          }
-        />
-        */}
+        {/* Pages with the sidebar layout */}
+        <Route element={<Layout />}>
+          {/* Main events page */}
+          <Route path="/" element={<EventsPage />} />
 
-        {/* Page WITHOUT sidebar (like login) */}
-        <Route path="/login" element={<Login />} />
+          {/* Saved / interested events */}
+          <Route path="/saved" element={<SavedEventsPage />} />
+
+          {/* Placeholder redirects — add real pages when ready */}
+          <Route path="/dashboard" element={<Navigate to="/" replace />} />
+          <Route path="/opportunities" element={<Navigate to="/" replace />} />
+          <Route path="/profile" element={<Navigate to="/" replace />} />
+        </Route>
+
+        {/* Catch-all: redirect unknown routes to home */}
+        <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
-    </Router>
+    </BrowserRouter>
   );
 }
 
