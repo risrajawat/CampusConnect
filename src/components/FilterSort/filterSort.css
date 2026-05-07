@@ -21,7 +21,7 @@
 
 .category-btn {
   border: none;
-  background: #f3f4f6;
+  background: #ede6da;
   padding: 10px 14px;
   border-radius: 8px;
   cursor: pointer;
@@ -30,24 +30,24 @@
 }
 
 .category-btn:hover {
-  background: #e5e7eb;
+  background: #e0d6c6;
 }
 
 /* Active Button */
 
 .category-btn.active {
-  background: #6c5ce7;
+  background: #5a7247;
   color: white;
 }
 
 /* Sort Dropdown */
 
 .sort-select {
-  border: 1px solid #ddd;
+  border: 1px solid #d9d0c3;
   padding: 10px 14px;
   border-radius: 8px;
   outline: none;
   cursor: pointer;
   font-size: 14px;
-  background: white;
+  background: #faf6ef;
 }

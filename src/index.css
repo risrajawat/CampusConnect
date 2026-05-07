@@ -5,16 +5,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;1,9..40,400&display=swap');
 
 :root {
-  /* Colors */
-  --color-primary: #4f46e5;
-  --color-primary-light: #ede9fe;
-  --color-primary-dark: #3730a3;
-  --color-bg: #f5f7fb;
+  /* Colors — Beige & Moss Green */
+  --color-primary: #5a7247;
+  --color-primary-light: #e8e0d4;
+  --color-primary-dark: #3d5230;
+  --color-bg: #f5f0e8;
   --color-white: #ffffff;
-  --color-text: #1e293b;
-  --color-text-muted: #64748b;
-  --color-border: #e2e8f0;
-  --color-sidebar-bg: #ffffff;
+  --color-text: #2c2c2c;
+  --color-text-muted: #6b6356;
+  --color-border: #d9d0c3;
+  --color-sidebar-bg: #faf6ef;
   --color-card-bg: #ffffff;
 
   /* Category Tag Colors */

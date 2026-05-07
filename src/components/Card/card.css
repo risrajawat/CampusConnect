@@ -29,7 +29,7 @@
 /* Category */
 
 .card-category {
-  background: #6c5ce7;
+  background: #5a7247;
   color: white;
   padding: 5px 10px;
   border-radius: 8px;
@@ -72,7 +72,7 @@
 
 .details-btn {
   border: none;
-  background: #6c5ce7;
+  background: #5a7247;
   color: white;
   padding: 10px 14px;
   border-radius: 8px;
@@ -81,7 +81,7 @@
 }
 
 .details-btn:hover {
-  background: #5a4bd8;
+  background: #3d5230;
 }
 
 /* Interest Button */
