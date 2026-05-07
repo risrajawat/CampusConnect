@@ -1,47 +1,79 @@
-Campus Connect
-Overview
+# CampusConnect
 
-Campus Connect is a React-based web application designed to centralize campus activities and improve collaboration between students and faculty. The platform provides a structured interface to explore events, manage opportunities, and streamline communication within a college environment.
+CampusConnect is a smart college event finder web app that helps students discover, search, filter, and save events happening on their campus — all in one clean dashboard.
 
-Objective
+---
 
-The goal of Campus Connect is to offer a single, user-friendly system where users can:
+## 🚀 Features
 
-Stay updated with campus events
-Discover academic and extracurricular opportunities
-Enable collaboration between students and faculty
-Key Features
-User Role Selection
+* 📅 Browse all campus events in a modern card grid
+* 🔍 Search events by name, venue, or keyword
+* 🗂️ Filter events by category — Hackathons, Workshops, Seminars, and more
+* 💛 Mark events as Interested and save them for later
+* 🔖 Dedicated "My Interests" page to view all saved events
+* 💾 Interests are saved in localStorage — survive page refresh
+* ⚡ Fast, responsive UI with smooth hover animations
 
-Users can access the platform as either:
+---
 
-Student
-Faculty
+## 🛠️ Technologies Used
 
-The interface adapts based on the selected role.
+* React.js (Vite)
+* React Router DOM v6
+* CSS 
 
-Events Dashboard
-Displays various campus events including:
-Hackathons
-Workshops
-Guest Lectures
-Seminars
-College Events
-Sidebar-based category navigation for quick filtering
-Search functionality to find events
-Sorting options for better organization
-Opportunities Section
-Faculty can post tasks or project opportunities
-Students can browse and explore available opportunities
-Includes basic details such as title, description, and estimated cost
-Interactive Features
-Search functionality using array methods
-Filtering through sidebar categories
-Sorting of events and opportunities
-Responsive layout for different screen sizes
-Technologies Used
-React (Frontend)
-JavaScript (ES6+)
-CSS
-React Router
-Local Storage (for basic data handling)
+---
+
+## 📦 Installation & Setup
+
+1. Clone the repository:
+
+```
+git clone https://github.com/yourusername/campusconnect.git
+```
+
+2. Navigate to the project folder:
+
+```
+cd campusconnect
+```
+
+3. Install dependencies:
+
+```
+npm install
+```
+
+4. Start the development server:
+
+```
+npm run dev
+```
+
+5. Open in your browser:
+
+```
+http://localhost:5173
+```
+
+---
+
+
+Valid category values: `Hackathon`, `Workshop`, `Seminar`, `Guest Lecture`, `College Event`
+
+---
+
+## 🔮 Future Enhancements
+
+* Event detail page with full info and registration button
+* Real user authentication (Firebase / Supabase)
+* Calendar view for events
+* Email reminders for saved events
+* Admin panel to manage events from the UI
+* Dark mode support
+
+---
+
+## 📌 Project Status
+
+🚧 Currently in development (Milestone 1)
