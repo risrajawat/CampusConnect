@@ -3,12 +3,12 @@
 .sidebar {
   width: 240px;
   height: 100vh;
-  background: white;
-  border-right: 1px solid #e5e7eb;
+  background: #faf6ef;
+  border-right: 1px solid #d9d0c3;
   padding: 20px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  gap: 10px;
   position: fixed;
   left: 0;
   top: 0;
@@ -18,7 +18,7 @@
 
 .logo h2 {
   font-size: 22px;
-  color: #6c5ce7;
+  color: #5a7247;
   margin-bottom: 30px;
 }
 
@@ -45,12 +45,12 @@
 }
 
 .menu-link:hover {
-  background: #f3f4f6;
+  background: #ede6da;
 }
 
 .menu-link.active {
-  background: #ede9fe;
-  color: #6c5ce7;
+  background: #d6e4cc;
+  color: #3d5230;
   font-weight: 600;
 }
 
@@ -63,6 +63,7 @@
 /* Logout Button */
 
 .logout-btn {
+  margin-top: auto;
   border: none;
   background: #fee2e2;
   color: #dc2626;
