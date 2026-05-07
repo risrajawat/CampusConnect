@@ -4,6 +4,7 @@ import EventsPage from "./pages/Events/Events";
 import SavedEventsPage from "./pages/SavedEvents/SavedEvents";
 import LoginPage from "./pages/Login/Login";
 import Dashboard from "./pages/dashboard/Dashboard";
+import Opportunities from "./pages/Opportunities/Oppotunities";
 
 // App is just the router — Layout wraps the pages that need a sidebar
 function App() {
@@ -23,7 +24,7 @@ function App() {
 
           {/* Placeholder redirects — add real pages when ready */}
           <Route path="/dashboard" element={<Dashboard/>} />
-          <Route path="/opportunities" element={<Navigate to="/" replace />} />
+          <Route path="/opportunities" element={<Opportunities/>} />
           <Route path="/profile" element={<Navigate to="/" replace />} />
         </Route>
 
