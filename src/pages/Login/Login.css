@@ -102,11 +102,15 @@
 }
 
 .type-btn:hover {
-  background: #5a7247;
-  color: white;
+  background: rgba(90, 114, 71, 0.1);
+  transform: translateY(-2px);
 }
 
 .type-btn.active {
   background: #5a7247;
   color: white;
+  border-color: #3d5230;
+  box-shadow: 0 6px 16px rgba(90, 114, 71, 0.4), inset 0 2px 4px rgba(255, 255, 255, 0.2);
+  font-weight: 700;
+  transform: scale(1.05);
 }
