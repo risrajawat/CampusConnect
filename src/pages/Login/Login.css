@@ -5,7 +5,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #f5f7fb;
+  background: #f5f0e8;
 }
 
 /* Login Box */
@@ -16,7 +16,7 @@
   width: 100%;
   max-width: 400px;
   border-radius: 16px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
 
   display: flex;
   flex-direction: column;
@@ -27,12 +27,12 @@
 
 .login-box h1 {
   text-align: center;
-  color: #6c5ce7;
+  color: #5a7247;
 }
 
 .login-box p {
   text-align: center;
-  color: #666;
+  color: #6b6356;
   font-size: 14px;
 }
 
@@ -40,16 +40,22 @@
 
 .login-box input {
   padding: 12px;
-  border: 1px solid #ddd;
+  border: 1px solid #d9d0c3;
   border-radius: 10px;
   outline: none;
   font-size: 14px;
+  background: #faf6ef;
+}
+
+.login-box input:focus {
+  border-color: #5a7247;
+  background: white;
 }
 
 /* Button */
 
 .login-box button {
-  background: #6c5ce7;
+  background: #5a7247;
   color: white;
   border: none;
   padding: 12px;
@@ -60,5 +66,47 @@
 }
 
 .login-box button:hover {
-  background: #5a4bd8;
+  background: #3d5230;
+}
+
+/* User Type Question */
+
+.user-type-question {
+  margin: 20px 0;
+}
+
+.user-type-question p {
+  text-align: center;
+  color: #5a7247;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.button-group {
+  display: flex;
+  gap: 12px;
+}
+
+.type-btn {
+  flex: 1;
+  padding: 10px 16px;
+  border: 2px solid #5a7247;
+  background: transparent;
+  color: #5a7247;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.type-btn:hover {
+  background: #5a7247;
+  color: white;
+}
+
+.type-btn.active {
+  background: #5a7247;
+  color: white;
 }
