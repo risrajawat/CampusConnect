@@ -3,6 +3,7 @@ import Layout from "./components/Layout/Layout";
 import EventsPage from "./pages/Events/Events";
 import SavedEventsPage from "./pages/SavedEvents/SavedEvents";
 import LoginPage from "./pages/Login/Login";
+import Profile from "./pages/Profile/Profile";
 
 // App is just the router — Layout wraps the pages that need a sidebar
 function App() {
@@ -23,7 +24,7 @@ function App() {
           {/* Placeholder redirects — add real pages when ready */}
           <Route path="/dashboard" element={<Navigate to="/" replace />} />
           <Route path="/opportunities" element={<Navigate to="/" replace />} />
-          <Route path="/profile" element={<Navigate to="/" replace />} />
+          <Route path="/profile" element={<Profile/>} />
         </Route>
 
         {/* Catch-all: redirect unknown routes to home */}
