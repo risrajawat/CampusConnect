@@ -1,41 +1,77 @@
-import React from 'react'
-import './Login.css'
-import { FaUser } from "react-icons/fa";
-import { LuLock } from "react-icons/lu";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
-const Login = () => {
+import "./Login.css";
+
+function Login() {
+
+  const navigate = useNavigate();
+
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  // Login Function
+  const handleLogin = (e) => {
+
+    e.preventDefault();
+
+    // Simple Validation
+    if (!email || !password) {
+      alert("Please fill all fields");
+      return;
+    }
+
+    // Save user
+    localStorage.setItem(
+      "user",
+      JSON.stringify({ email })
+    );
+
+    // Go to Events Page
+    navigate("/");
+  };
+
   return (
-    <div className='login-container'>
-      <div className='wrapper'>
-          <form action="">
-              <h1>Login</h1>
-              
-              <div className='inp-box'>
-                  <input type="text" placeholder='Username' required />
-                  <FaUser className='icon' />
-              </div>
-              
-              <div className='inp-box'>
-                  <input type="password" placeholder='Password' required />
-                  <LuLock className='icon' />
-              </div>
-              
-              <div className="remember-forgot">
-                  <label>
-                      <input type="checkbox" /> Remember me
-                  </label>
-                  <a href="#">Forgot password?</a>
-              </div>
-              
-              <button type='submit'>Login</button>
-              
-              <div className="register-link">
-                  <p>Don't have an account? <a href="#">Register</a></p>
-              </div>
-          </form>
-      </div>
+    <div className="login-page">
+
+      <form
+        className="login-box"
+        onSubmit={handleLogin}
+      >
+
+        <h1>CampusConnect</h1>
+
+        <p>Login to continue</p>
+
+        {/* Email */}
+        <input
+          type="email"
+          placeholder="Enter email"
+          value={email}
+          onChange={(e) =>
+            setEmail(e.target.value)
+          }
+        />
+
+        {/* Password */}
+        <input
+          type="password"
+          placeholder="Enter password"
+          value={password}
+          onChange={(e) =>
+            setPassword(e.target.value)
+          }
+        />
+
+        {/* Button */}
+        <button type="submit">
+          Login
+        </button>
+
+      </form>
+
     </div>
-  )
+  );
 }
 
-export default Login
+export default Login;
