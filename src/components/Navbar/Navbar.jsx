@@ -1,6 +1,16 @@
 import "./Navbar.css";
 
 function Navbar() {
+
+  const user = JSON.parse(localStorage.getItem("user")) || {};
+
+  const email = user.email || "";
+  const name = email.split("@")[0] || "User";
+  const displayName = name.charAt(0).toUpperCase() + name.slice(1);
+  const initial = displayName.charAt(0);
+
+  const role = user.userType === "faculty" ? "Faculty" : "Student";
+
   return (
     <div className="navbar">
 
@@ -18,12 +28,12 @@ function Navbar() {
 
         <div className="profile">
           <div className="profile-image">
-            R
+            {initial}
           </div>
 
           <div>
-            <h4>Rishabh</h4>
-            <p>Student</p>
+            <h4>{displayName}</h4>
+            <p>{role}</p>
           </div>
         </div>
 
