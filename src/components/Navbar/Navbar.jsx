@@ -21,11 +21,6 @@ function Navbar() {
 
       {/* Right Side */}
       <div className="navbar-user">
-
-        <div className="notification">
-          🔔
-        </div>
-
         <div className="profile">
           <div className="profile-image">
             {initial}
