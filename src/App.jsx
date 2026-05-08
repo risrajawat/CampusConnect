@@ -6,6 +6,7 @@ import LoginPage from "./pages/Login/Login";
 import Dashboard from "./pages/dashboard/Dashboard";
 import Opportunities from "./pages/Opportunities/Oppotunities";
 import Profile from "./pages/Profile/Profile";
+import EventDetail from "./pages/EventDetail/EventDetail";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route element={<Layout />}>
           {/* Main events page */}
           <Route path="/" element={<EventsPage />} />
+          <Route path="/events/:id" element={<EventDetail/>}/>
 
           {/* Saved / interested events */}
           <Route path="/saved" element={<SavedEventsPage />} />

@@ -1,3 +1,6 @@
+// All the campus events data lives here
+// Each event now has full detail-page fields too
+
 const events = [
   {
     id: 1,
@@ -6,10 +9,36 @@ const events = [
     time: "9:00 AM",
     venue: "Computer Lab Block A",
     category: "Hackathon",
+    organizer: "Computer Science Department",
+    seats: 120,
+    registeredCount: 87,
     description:
-      "Join us for a 24-hour coding challenge and build innovative solutions. Open to all branches!",
+      "Join us for an intense 24-hour coding challenge where teams of 2–4 students build innovative tech solutions to real-world problems. Whether you're a frontend wizard, backend guru, or ML enthusiast — there's a challenge for everyone. Judges from top companies will evaluate projects live.",
     image:
-      "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=600&q=80",
+      "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=800&q=80",
+    perks: [
+      "🏆 Cash prizes worth ₹50,000 for top 3 teams",
+      "📜 Certificate of participation for all",
+      "🍕 Free meals & snacks for 24 hours",
+      "🎁 Goody bags from sponsor companies",
+      "💼 Internship interview opportunity with TechNova",
+      "🌐 Project featured on college website",
+    ],
+    eligibility: [
+      "Open to all branches and years",
+      "Teams of 2 to 4 members",
+      "Basic programming knowledge required",
+      "Bring your own laptop",
+    ],
+    agenda: [
+      { time: "9:00 AM", activity: "Registration & Team Check-in" },
+      { time: "10:00 AM", activity: "Problem Statement Reveal + Hackathon Begins" },
+      { time: "2:00 PM", activity: "Mid-check Mentor Review" },
+      { time: "10:00 AM (Day 2)", activity: "Final Submissions" },
+      { time: "12:00 PM", activity: "Project Presentations to Jury" },
+      { time: "3:00 PM", activity: "Results & Prize Distribution" },
+    ],
+    tags: ["Coding", "Teams", "Prizes", "24-Hour"],
   },
   {
     id: 2,
@@ -18,10 +47,33 @@ const events = [
     time: "11:00 AM",
     venue: "Main Auditorium",
     category: "Guest Lecture",
+    organizer: "Training & Placement Cell",
+    seats: 300,
+    registeredCount: 210,
     description:
-      "An insightful session by Dr. Rajeev Mehta on the future of AI and its real-world applications.",
+      "A thought-provoking session by Dr. Rajeev Mehta, Chief Data Scientist at InfoEdge, on how Artificial Intelligence is transforming industries like healthcare, finance, and manufacturing. This talk will cover real industry use-cases, the future job landscape for CS graduates, and how to prepare yourself for an AI-driven world.",
     image:
-      "https://images.unsplash.com/photo-1531482615713-2afd69097998?w=600&q=80",
+      "https://images.unsplash.com/photo-1531482615713-2afd69097998?w=800&q=80",
+    perks: [
+      "📜 Attendance certificate issued",
+      "📚 Exclusive reading list by Dr. Mehta",
+      "🤝 Networking session after the lecture",
+      "❓ Live Q&A with the speaker",
+      "💡 Free access to recorded session",
+    ],
+    eligibility: [
+      "Open to all students",
+      "No prior knowledge required",
+      "Faculty members welcome",
+    ],
+    agenda: [
+      { time: "11:00 AM", activity: "Welcome & Speaker Introduction" },
+      { time: "11:15 AM", activity: "Keynote: AI Across Industries" },
+      { time: "12:30 PM", activity: "Case Studies & Real-World Examples" },
+      { time: "1:00 PM", activity: "Live Q&A Session" },
+      { time: "1:30 PM", activity: "Networking & Refreshments" },
+    ],
+    tags: ["AI", "Industry", "Career", "Networking"],
   },
   {
     id: 3,
@@ -30,10 +82,35 @@ const events = [
     time: "10:00 AM",
     venue: "Lab 201, IT Block",
     category: "Workshop",
+    organizer: "Web Dev Club",
+    seats: 60,
+    registeredCount: 54,
     description:
-      "Hands-on workshop to learn full-stack web development from scratch. Bring your laptop!",
+      "A hands-on full-day workshop where you'll build a complete full-stack web application from scratch using React and Node.js. Our experienced mentors from the Web Dev Club will guide you step by step — from setting up your project to deploying it live on the internet. Bring your laptop and a learning attitude!",
     image:
-      "https://images.unsplash.com/photo-1593720219276-0b1eacd0aef4?w=600&q=80",
+      "https://images.unsplash.com/photo-1593720219276-0b1eacd0aef4?w=800&q=80",
+    perks: [
+      "💻 Build a real deployable project",
+      "📜 Workshop completion certificate",
+      "🧑‍🏫 1-on-1 mentoring from seniors",
+      "☁️ Free deployment on Vercel",
+      "📁 All source code & resources shared",
+    ],
+    eligibility: [
+      "Basic HTML/CSS knowledge helpful",
+      "Must bring your own laptop",
+      "First 60 registrations only",
+      "Open to all years",
+    ],
+    agenda: [
+      { time: "10:00 AM", activity: "Setup: Node.js, VSCode, Git" },
+      { time: "11:00 AM", activity: "Building the Backend with Express" },
+      { time: "1:00 PM", activity: "Lunch Break" },
+      { time: "2:00 PM", activity: "Frontend with React" },
+      { time: "4:00 PM", activity: "Connecting Frontend & Backend" },
+      { time: "5:00 PM", activity: "Live Deployment + Certificate Distribution" },
+    ],
+    tags: ["React", "Node.js", "Hands-on", "Beginner-friendly"],
   },
   {
     id: 4,
@@ -42,10 +119,33 @@ const events = [
     time: "02:00 PM",
     venue: "Seminar Hall 1",
     category: "Seminar",
+    organizer: "Research & Innovation Cell",
+    seats: 150,
+    registeredCount: 90,
     description:
-      "Learn the basics of research methodology and how to write research papers effectively.",
+      "This seminar is designed for students interested in academic research. You'll learn how to identify a research problem, review literature, design a study, collect data, and write a structured research paper. Guest panelists include published professors from DTU and IIT Delhi who will share practical tips from their own research journeys.",
     image:
-      "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=600&q=80",
+      "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&q=80",
+    perks: [
+      "📜 Participation certificate",
+      "📖 Research paper writing guide (PDF)",
+      "🧑‍🔬 Q&A with published researchers",
+      "🔗 Access to college research portal",
+      "📝 Chance to submit paper for college journal",
+    ],
+    eligibility: [
+      "Open to 2nd year and above",
+      "Recommended for students pursuing projects or thesis",
+      "No prerequisites required",
+    ],
+    agenda: [
+      { time: "2:00 PM", activity: "Introduction to Research Methodology" },
+      { time: "2:45 PM", activity: "Literature Review & Citation Tools" },
+      { time: "3:30 PM", activity: "Data Collection Methods" },
+      { time: "4:00 PM", activity: "Paper Writing & Formatting Guidelines" },
+      { time: "4:30 PM", activity: "Panel Q&A" },
+    ],
+    tags: ["Research", "Academic", "Paper Writing", "PhD Prep"],
   },
   {
     id: 5,
@@ -54,10 +154,36 @@ const events = [
     time: "All Day",
     venue: "College Ground",
     category: "College Event",
+    organizer: "Student Council",
+    seats: 1000,
+    registeredCount: 730,
     description:
-      "Three days of technical events, competitions, and fun activities. Don't miss the grand finale!",
+      "Tech Fest 2024 is the biggest annual technical festival of our college! Three action-packed days of hackathons, robotics competitions, coding contests, technical paper presentations, gaming tournaments, and cultural nights. Participants from 30+ colleges across the country are expected. Don't miss the grand finale night with live performances!",
     image:
-      "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=600&q=80",
+      "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=800&q=80",
+    perks: [
+      "🏆 Prizes worth over ₹2,00,000",
+      "🎤 National-level competition exposure",
+      "🤝 Industry sponsor stalls & demos",
+      "🍔 Food court with 20+ stalls",
+      "🎉 Celebrity cultural night performance",
+      "📜 Certificates for all participants",
+    ],
+    eligibility: [
+      "Open to students from all colleges",
+      "Individual and team events available",
+      "Registration required per event",
+      "College ID required for entry",
+    ],
+    agenda: [
+      { time: "Day 1 – 9 AM", activity: "Inauguration & Robotics Championship" },
+      { time: "Day 1 – 2 PM", activity: "Coding Contest Round 1" },
+      { time: "Day 2 – 10 AM", activity: "Hackathon Begins + Paper Presentations" },
+      { time: "Day 2 – 6 PM", activity: "Gaming Tournament Finals" },
+      { time: "Day 3 – 11 AM", activity: "All Finals + Prize Distribution" },
+      { time: "Day 3 – 7 PM", activity: "Grand Cultural Night" },
+    ],
+    tags: ["Fest", "Multi-event", "National", "Cultural Night"],
   },
   {
     id: 6,
@@ -66,10 +192,33 @@ const events = [
     time: "11:30 AM",
     venue: "Main Auditorium",
     category: "Guest Lecture",
+    organizer: "Training & Placement Cell",
+    seats: 250,
+    registeredCount: 180,
     description:
-      "A talk on career paths and opportunities in the rapidly growing field of Data Science.",
+      "An inspiring talk on career paths in the Data Science ecosystem — from Data Analyst and ML Engineer to AI Researcher and Product Manager. The speaker will walk through the skills employers look for, how to build a data portfolio, how to crack Data Science interviews, and what the field will look like in the next 5 years.",
     image:
-      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&q=80",
+      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80",
+    perks: [
+      "📜 Certificate of attendance",
+      "📊 Free Data Science roadmap PDF",
+      "💼 Resume review opportunity",
+      "🔗 LinkedIn connection with the speaker",
+      "🎯 Mock interview tips handout",
+    ],
+    eligibility: [
+      "Open to all students",
+      "Especially recommended for 3rd and 4th year students",
+      "No prerequisites",
+    ],
+    agenda: [
+      { time: "11:30 AM", activity: "Introduction by T&P Head" },
+      { time: "11:45 AM", activity: "Talk: Career Paths in Data Science" },
+      { time: "12:45 PM", activity: "Portfolio & Interview Prep Tips" },
+      { time: "1:15 PM", activity: "Open Q&A" },
+      { time: "1:45 PM", activity: "Networking with Speaker" },
+    ],
+    tags: ["Data Science", "Career", "ML", "Placement"],
   },
   {
     id: 7,
@@ -78,10 +227,35 @@ const events = [
     time: "9:00 AM",
     venue: "Design Lab, Block C",
     category: "Workshop",
+    organizer: "Design & Innovation Club",
+    seats: 40,
+    registeredCount: 38,
     description:
-      "A full-day bootcamp on user interface and user experience design principles using Figma.",
+      "A full-day intensive bootcamp on User Interface and User Experience design. You will learn the entire design process — from user research and wireframing to building high-fidelity prototypes in Figma. By the end of the day, you will have a complete app design in your portfolio. No design experience needed, just curiosity!",
     image:
-      "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=600&q=80",
+      "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=800&q=80",
+    perks: [
+      "🎨 Build a real Figma project for your portfolio",
+      "📜 Bootcamp certificate",
+      "🧑‍🎨 Feedback from working designers",
+      "🔗 Figma Pro access for 1 month",
+      "💡 Design resources & component kit",
+    ],
+    eligibility: [
+      "No design background needed",
+      "Must bring laptop with Figma installed",
+      "Limited to 40 seats only",
+      "Open to all departments",
+    ],
+    agenda: [
+      { time: "9:00 AM", activity: "Intro to UX: Research & Empathy Maps" },
+      { time: "10:30 AM", activity: "Wireframing & Information Architecture" },
+      { time: "12:00 PM", activity: "Lunch Break" },
+      { time: "1:00 PM", activity: "High-Fidelity Design in Figma" },
+      { time: "3:30 PM", activity: "Prototyping & User Testing" },
+      { time: "5:00 PM", activity: "Portfolio Review + Certificate Distribution" },
+    ],
+    tags: ["Figma", "Design", "Portfolio", "Beginner"],
   },
   {
     id: 8,
@@ -90,10 +264,36 @@ const events = [
     time: "10:00 AM",
     venue: "CS Department Lab",
     category: "Hackathon",
+    organizer: "Coding Club",
+    seats: 200,
+    registeredCount: 155,
     description:
-      "Compete against the best coders from 10 colleges in this exciting championship event.",
+      "The most competitive coding event of the semester! Students from 10+ colleges go head-to-head in solving algorithmic challenges across 3 rounds — MCQ screening, live coding, and a final speed round. The contest covers Data Structures, Algorithms, and problem-solving under pressure. Only the sharpest coders advance.",
     image:
-      "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=600&q=80",
+      "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=800&q=80",
+    perks: [
+      "🥇 ₹15,000 first prize",
+      "🥈 ₹8,000 second prize",
+      "🥉 ₹4,000 third prize",
+      "📜 Certificate for all participants",
+      "🏆 College trophy for winning institution",
+      "🎁 Sponsor swag for top 10",
+    ],
+    eligibility: [
+      "Open to students from any college",
+      "Individual participation only",
+      "Basic DSA knowledge required",
+      "Bring college ID",
+    ],
+    agenda: [
+      { time: "10:00 AM", activity: "Registration & Rules Briefing" },
+      { time: "10:30 AM", activity: "Round 1: MCQ Screening (30 mins)" },
+      { time: "11:30 AM", activity: "Round 2: Live Coding (90 mins)" },
+      { time: "1:30 PM", activity: "Lunch Break" },
+      { time: "2:30 PM", activity: "Round 3: Speed Coding Final" },
+      { time: "4:00 PM", activity: "Results & Prize Ceremony" },
+    ],
+    tags: ["DSA", "Competitive", "Inter-College", "Prizes"],
   },
   {
     id: 9,
@@ -102,10 +302,33 @@ const events = [
     time: "3:00 PM",
     venue: "Conference Room, Admin Block",
     category: "Seminar",
+    organizer: "E-Cell (Entrepreneurship Cell)",
+    seats: 100,
+    registeredCount: 62,
     description:
-      "Learn from successful alumni entrepreneurs about starting your own business journey.",
+      "Hear directly from college alumni who have built their own startups. This seminar covers the entire startup journey — from ideation and market validation to fundraising, building a team, and scaling a product. Panelists include founders of funded startups who will share their real wins, failures, and hard-earned lessons.",
     image:
-      "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=600&q=80",
+      "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=800&q=80",
+    perks: [
+      "🚀 Access to E-Cell incubation programme",
+      "📜 Participation certificate",
+      "💡 Idea validation session with mentors",
+      "🤝 Networking with startup founders",
+      "📖 Free startup toolkit resources",
+    ],
+    eligibility: [
+      "Open to all students with a startup idea or curiosity",
+      "No business background required",
+      "Teams welcome to attend together",
+    ],
+    agenda: [
+      { time: "3:00 PM", activity: "Welcome & E-Cell Introduction" },
+      { time: "3:15 PM", activity: "Founder Stories Panel" },
+      { time: "4:15 PM", activity: "From Idea to MVP – Workshop Session" },
+      { time: "5:00 PM", activity: "Fundraising & Pitching Basics" },
+      { time: "5:30 PM", activity: "Open Q&A & Networking" },
+    ],
+    tags: ["Startup", "Entrepreneurship", "Founders", "E-Cell"],
   },
 ];
 

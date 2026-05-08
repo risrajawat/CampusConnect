@@ -1,17 +1,31 @@
+import { useNavigate } from "react-router-dom";
+
 import "./Card.css";
 
-function Card({ event, isInterested, onToggleInterest }) {
+function EventCard({
+  event,
+  isInterested,
+  onToggleInterest,
+}) {
+
+  const navigate = useNavigate();
+
+  // Open Details Page
+  const viewDetails = () => {
+    navigate(`/events/${event.id}`);
+  };
+
   return (
     <div className="card">
 
-      {/* Event Image */}
+      {/* Image */}
       <img
         src={event.image}
         alt={event.title}
         className="card-image"
       />
 
-      {/* Card Content */}
+      {/* Content */}
       <div className="card-content">
 
         {/* Category */}
@@ -40,21 +54,32 @@ function Card({ event, isInterested, onToggleInterest }) {
         {/* Buttons */}
         <div className="card-buttons">
 
-          <button className="details-btn">
+          <button
+            className="details-btn"
+            onClick={viewDetails}
+          >
             View Details
           </button>
 
           <button
-            className={isInterested ? "interest-btn active" : "interest-btn"}
-            onClick={() => onToggleInterest(event.id)}
+            className={
+              isInterested
+                ? "interest-btn active"
+                : "interest-btn"
+            }
+            onClick={() =>
+              onToggleInterest(event.id)
+            }
           >
             {isInterested ? "❤️" : "🤍"}
           </button>
 
         </div>
+
       </div>
+
     </div>
   );
 }
 
-export default Card;
+export default EventCard;
