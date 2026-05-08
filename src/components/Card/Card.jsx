@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 
-import "./Card.css";
+import "./card.css";
 
 function EventCard({
   event,

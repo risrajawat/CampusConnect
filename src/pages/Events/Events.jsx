@@ -7,7 +7,7 @@ import EventCard from "../../components/Card/Card";
 
 import events from "../../data/events";
 
-import "./Events.css";
+import "./events.css";
 
 function Events() {
 
