@@ -1,4 +1,4 @@
-import "./FilterSort.css";
+import "./filterSort.css";
 
 function FilterSort({
   activeCategory,
