@@ -7,10 +7,15 @@ import "./Profile.css";
 
 function Profile() {
 
+  const loggedIn = JSON.parse(localStorage.getItem("user")) || {};
+
+  const emailName = (loggedIn.email || "").split("@")[0] || "User";
+  const capitalizedName = emailName.charAt(0).toUpperCase() + emailName.slice(1);
+
   // User Data
   const [user, setUser] = useState({
-    name: "Rishabh",
-    email: "rishabh@gmail.com",
+    name: capitalizedName,
+    email: loggedIn.email || "",
     college: "Rishihood University",
     branch: "Computer Science",
   });
