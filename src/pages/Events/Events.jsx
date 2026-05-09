@@ -29,14 +29,20 @@ function Events() {
 
   // Filter Events
   let filteredEvents = events.filter((event) => {
-    // Search
     const matchesSearch = event.title.toLowerCase().includes(search.toLowerCase());
-    // Category
     const matchesCategory = category === "All" || event.category === category;
     return matchesSearch && matchesCategory;
   });
 
   // Sort Events
+  if (sortBy === "Latest") {
+    filteredEvents.sort((a, b) => {
+      const dateA = new Date(a.date.split(" - ")[0]);
+      const dateB = new Date(b.date.split(" - ")[0]);
+      return dateB - dateA;
+    });
+  }
+
   if (sortBy === "A-Z") {
     filteredEvents.sort((a, b) => a.title.localeCompare(b.title));
   }
